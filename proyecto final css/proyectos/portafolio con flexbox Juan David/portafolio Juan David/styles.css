@@ -1,0 +1,1894 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+ 
+  line-height: 1.7;
+  color: #333333;
+  background-color: #ffffff;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+}
+
+/* ===========================================
+     2. TIPOGRAFÍA GENERAL - MEJORADA
+     =========================================== */
+h1,
+h2,
+h3,
+h4 {
+  /* MEJORADO: Fuente Lexend para títulos */
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  /* NUEVO: Letter-spacing para títulos */
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  /* MEJORADO: Escala tipográfica más clara */
+  font-size: 3rem; /* 48px */
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.25rem; /* 36px */
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px */
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  /* NUEVO: Límite de ancho para mejor legibilidad */
+  max-width: 70ch;
+}
+
+strong {
+  font-weight: 600;
+  color: #000000;
+}
+
+em {
+  font-style: italic;
+}
+
+/* NUEVO: Párrafos introductorios más grandes */
+.about__intro,
+.hero__description {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.8;
+  color: #555555;
+}
+
+/* ===========================================
+     3. ENLACES - MEJORADO
+     =========================================== */
+a {
+  color: #2563eb;
+  text-decoration: none;
+  /* NUEVO: Transición suave (sin animación completa aún) */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+a:active {
+  color: #1e40af;
+}
+
+/* ===========================================
+     4. LISTAS
+     =========================================== */
+ul {
+  list-style: none;
+}
+
+/* ===========================================
+     5. HEADER - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 24px 0;
+} 
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header__brand {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header__name {
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  /* MEJORADO: Usando Playfair Display */
+  font-family: "Lexend", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.header__tagline {
+  color: #666666;
+  font-size: 0.875rem; /* 14px */
+  /* NUEVO: Espaciado de letras para subtítulos */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ===========================================
+     6. NAVEGACIÓN - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.nav {
+  text-align: center;
+}
+
+.nav__list {
+  display: inline-block;
+}
+
+.nav__item {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.nav__link {
+  padding: 8px 12px;
+  display: inline-block;
+  color: #333333;
+  font-weight: 500;
+  /* NUEVO: Mejor espaciado */
+  font-size: 0.9375rem; /* 15px */
+  letter-spacing: 0.01em;
+}
+
+.nav__link:hover {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.nav__link--active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* ===========================================
+     7. MAIN CONTENT
+     =========================================== */
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* ===========================================
+     8. HERO SECTION - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.hero {
+  padding: 64px 0;
+  text-align: center;
+  background-color: #f0f4f8;
+  margin-bottom: 48px;
+}
+
+.hero__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero__title {
+  font-size: 3.5rem; /* 56px */
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  /* MEJORADO: Mejor peso y espaciado */
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem; /* 24px */
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.hero__description {
+  font-size: 1.125rem; /* 18px */
+  color: #666666;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.hero__actions {
+  margin-bottom: 3rem;
+}
+
+.hero__stats {
+  text-align: center;
+}
+
+.stat {
+  display: inline-block;
+  margin: 0 32px;
+  text-align: center;
+}
+
+.stat__number {
+  display: block;
+  font-size: 2.5rem; /* 40px */
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+  font-family: "Lexend", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.stat__label {
+  font-size: 0.875rem; /* 14px */
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+/* ===========================================
+     9. BOTONES - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  /* NUEVO: Mejor tipografía en botones */
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.button--primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.button--primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+  text-decoration: none;
+}
+
+.button--secondary {
+  background-color: #ffffff;
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+.button--secondary:hover {
+  background-color: #f0f4ff;
+  text-decoration: none;
+}
+
+.button--large {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+}
+
+/* ===========================================
+     10. ABOUT SECTION - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.about {
+  padding: 48px 0;
+}
+
+.about__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about__title {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.about__intro {
+  font-size: 1.25rem; /* 20px */
+  text-align: center;
+  color: #333333;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.about__text {
+  color: #666666;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+/* ===========================================
+     11. QUOTE - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.quote {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  border-left: 4px solid #2563eb;
+}
+
+.quote__text {
+  font-size: 1.25rem; /* 20px */
+  font-style: italic;
+  color: #333333;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  /* NUEVO: Mejor tipografía para citas */
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+}
+
+.quote__author {
+  color: #666666;
+  font-size: 0.875rem;
+  display: block;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* ===========================================
+     12. VALUES - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.values {
+  margin-top: 3rem;
+}
+
+.values__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.values__list {
+  padding: 0;
+}
+
+.values__item {
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  line-height: 1.6;
+}
+
+.values__item:hover {
+  background-color: #f0f4f8;
+  border-color: #2563eb;
+}
+
+.values__icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.values__item strong {
+  margin-right: 0.5rem;
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+
+.values__item span {
+  color: #666666;
+  font-size: 0.9375rem;
+}
+
+/* ===========================================
+     13. PROJECTS SECTION
+     =========================================== */
+.projects {
+  padding: 64px 0;
+  background-color: #f8f9fa;
+}
+
+.projects__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects__title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.projects__description {
+  text-align: center;
+  color: #666666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.projects__grid {
+  padding: 0 20px;
+}
+
+/* ===========================================
+     14. PROJECT CARD - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.project {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e0e0e0;
+}
+
+.project:hover {
+  border-color: #2563eb;
+}
+
+.project--featured {
+  border: 2px solid #2563eb;
+  position: relative;
+}
+
+.project__badge {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.project__title {
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-family: "Lexend", sans-serif;
+}
+
+.project__description {
+  color: #666666;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.project__subtitle {
+  font-size: 1.0625rem;
+  color: #333333;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.project__learnings {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project__learnings li {
+  color: #666666;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.project__technologies {
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 0.25rem 0.75rem;
+  margin-right: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.project__links {
+  text-align: left;
+}
+
+.project__link {
+  display: inline-block;
+  margin-right: 1rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+/* ===========================================
+     15. SKILLS SECTION - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.skills {
+  padding: 64px 0;
+}
+
+.skills__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skills__title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.skills__subtitle {
+  text-align: center;
+  color: #666666;
+  margin-bottom: 2rem;
+  font-size: 1.0625rem;
+  font-weight: 400;
+}
+
+.skills__list {
+  margin-bottom: 3rem;
+}
+
+.skill {
+  margin-bottom: 2rem;
+}
+
+.skill__name {
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.skill__bar {
+  background-color: #e0e0e0;
+  height: 24px;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.skill__progress {
+  background-color: #2563eb;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skill__progress--html {
+  width: 75%;
+}
+
+.skill__progress--css {
+  width: 60%;
+}
+
+.skill__progress--js {
+  width: 20%;
+}
+
+.skill__percentage {
+  color: #666666;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ===========================================
+     16. LEARNING - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.learning {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+}
+
+.learning__title {
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  font-size: 1.25rem;
+}
+
+.learning__list {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.learning__item {
+  color: #666666;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ===========================================
+     17. CONTACT SECTION - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.contact {
+  padding: 64px 0;
+  background-color: #f0f4f8;
+}
+
+.contact__container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact__title {
+  margin-bottom: 1rem;
+}
+
+.contact__description {
+  color: #666666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.contact__methods {
+  margin-bottom: 3rem;
+}
+
+.contact__method {
+  display: inline-block;
+  margin: 0 2rem 2rem;
+  text-align: center;
+}
+
+.contact__method-title {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.contact__link {
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+/* ===========================================
+     18. FOOTER - TIPOGRAFÍA MEJORADA
+     =========================================== */
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 48px 0;
+  text-align: center;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer__nav {
+  margin-bottom: 1.5rem;
+}
+
+.footer__link {
+  color: #ffffff;
+  margin: 0 1rem;
+  display: inline-block;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+.footer__link:hover {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.footer__credits {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* 
+  ╔═══════════════════════════════════════════════════════════════════════════╗
+  ║                                                                           ║
+  ║  MÓDULO 3: CÓDIGO NUEVO - VARIABLES CSS, DEGRADADOS Y SOMBRAS           ║
+  ║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+  ║  A partir de aquí todo es código NUEVO del Módulo 3                     ║
+  ║                                                                           ║
+  ╚═══════════════════════════════════════════════════════════════════════════╝
+  */
+
+/* ===========================================
+     19. VARIABLES CSS - NUEVO MÓDULO 3
+     =========================================== */
+:root {
+  /* Colores principales - Paleta más vibrante y clara */
+  --color-primary: #55505e; /* Púrpura vibrante */
+  --color-primary-dark: #4c1d95; /* Púrpura oscuro */
+  --color-primary-darker: #3b0764; /* Púrpura muy oscuro */
+  --color-primary-light: #8b5cf6; /* Púrpura claro */
+  --color-primary-lighter: #a78bfa; /* Púrpura muy claro */
+
+  /* Colores secundarios */
+  --color-secondary: #06b6d4; /* Cyan vibrante */
+  --color-secondary-dark: #0891b2; /* Cyan oscuro */
+  --color-secondary-light: #22d3ee; /* Cyan claro */
+
+  /* Colores neutros - Más claros para mejor contraste */
+  --color-dark: #1f2937; /* Gris muy oscuro (no negro puro) */
+  --color-gray-dark: #374151; /* Gris oscuro */
+  --color-gray: #6b7280; /* Gris medio */
+  --color-gray-light: #9ca3af; /* Gris claro */
+  --color-gray-lighter: #e5e7eb; /* Gris muy claro */
+  --color-light: #f9fafb; /* Casi blanco */
+  --color-lighter: #fef3c7; /* Crema muy claro */
+  --color-white: #ffffff; /* Blanco puro */
+
+  /* Colores de acento */
+  --color-accent: #f59e0b; /* Naranja dorado */
+  --color-accent-light: #fbbf24;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Degradados - Más vibrantes y luminosos */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #508e91 0%,
+    #06b6d4 100%
+  ); /* Púrpura a cyan */
+  --gradient-hero: linear-gradient(
+    135deg,
+    #a78bfa 0%,
+    #838088 50%,
+    #06b6d4 100%
+  ); /* Degradado tricolor */
+  --gradient-accent: linear-gradient(
+    135deg,
+    #fbbf24 0%,
+    #f59e0b 100%
+  ); /* Dorado */
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+}
+
+/* ===========================================
+     20. ACTUALIZACIONES CON VARIABLES - MÓDULO 3
+     =========================================== */
+
+/* Actualizar colores con variables */
+body {
+  color: var(--color-gray-dark);
+  background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-dark);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+a:active {
+  color: var(--color-primary-darker);
+}
+
+/* ===========================================
+     21. HERO CON DEGRADADOS - MÓDULO 3
+     =========================================== */
+.hero {
+  /* NUEVO: Degradado de fondo */
+  background: var(--gradient-hero);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.hero__title {
+  color: var(--color-white);
+  /* NUEVO: Sombra de texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero__subtitle {
+  color: var(--color-white);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero__description {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.stat__number {
+  color: var(--color-white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stat__label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===========================================
+     22. BOTONES CON SOMBRAS - MÓDULO 3
+     =========================================== */
+.button {
+  /* NUEVO: Border radius */
+  border-radius: var(--radius-md);
+  /* NUEVO: Sombra */
+  box-shadow: var(--shadow-md);
+}
+
+.button:hover {
+  /* NUEVO: Sombra más grande en hover */
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  /* NUEVO: Degradado sutil */
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.button--primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.button--secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* ===========================================
+     23. CARDS CON SOMBRAS - MÓDULO 3
+     =========================================== */
+.project {
+  /* NUEVO: Border radius */
+  border-radius: var(--radius-lg);
+  /* NUEVO: Sombra */
+  box-shadow: var(--shadow-md);
+  border: none;
+}
+
+.project:hover {
+  /* NUEVO: Sombra más grande en hover */
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.project--featured {
+  /* NUEVO: Degradado en borde */
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white), var(--gradient-primary);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.project__badge {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===========================================
+     24. TAGS CON COLORES - MÓDULO 3
+     =========================================== */
+.tag {
+  background: linear-gradient(
+    135deg,
+    #ddd6fe 0%,
+    #c4b5fd 100%
+  ); /* Degradado púrpura claro */
+  color: var(--color-primary-dark);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===========================================
+     25. QUOTE CON ESTILO - MÓDULO 3
+     =========================================== */
+.quote {
+  background: linear-gradient(
+    135deg,
+    var(--color-light) 0%,
+    var(--color-lighter) 100%
+  );
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===========================================
+     26. VALUES CON COLORES - MÓDULO 3
+     =========================================== */
+.values__item {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-lighter);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.values__item:hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-white) 0%,
+    var(--color-lighter) 100%
+  );
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ===========================================
+     27. SKILL BARS CON DEGRADADOS - MÓDULO 3
+     =========================================== */
+.skill__bar {
+  background-color: var(--color-gray-lighter);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill__progress {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
+  box-shadow: var(--shadow-sm);
+}
+
+.skill__progress--html {
+  background: linear-gradient(
+    90deg,
+    #f97316 0%,
+    #fb923c 100%
+  ); /* Naranja vibrante */
+}
+
+.skill__progress--css {
+  background: linear-gradient(
+    90deg,
+    #06b6d4 0%,
+    #22d3ee 100%
+  ); /* Cyan vibrante */
+}
+
+.skill__progress--js {
+  background: linear-gradient(
+    90deg,
+    #fbbf24 0%,
+    #fde047 100%
+  ); /* Amarillo dorado */
+}
+
+/* ===========================================
+     28. LEARNING SECTION - MÓDULO 3
+     =========================================== */
+.learning {
+  background: linear-gradient(
+    135deg,
+    var(--color-light) 0%,
+    var(--color-white) 100%
+  );
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===========================================
+     29. CONTACT SECTION - MÓDULO 3
+     =========================================== */
+.contact {
+  background: linear-gradient(
+    135deg,
+    #c7fedc 0%,
+    #8afdc3 50%,
+    #b5d4fd 100%
+  ); /* Crema a púrpura claro */
+}
+
+.contact__method {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.contact__method:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+/* ===========================================
+     30. HEADER CON SOMBRA - MÓDULO 3
+     =========================================== */
+.header {
+  background: var(--color-white);
+  border-bottom: none;
+  box-shadow: var(--shadow-md);
+}
+
+.nav__link {
+  color: var(--color-gray-dark);
+  border-radius: var(--radius-md);
+}
+
+.nav__link:hover {
+  color: var(--color-primary);
+  background: var(--color-lighter);
+}
+
+.nav__link--active {
+  color: var(--color-white);
+  background: var(--gradient-primary);
+  padding: 8px 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===========================================
+     31. FOOTER CON DEGRADADO - MÓDULO 3
+     =========================================== */
+.footer {
+  background: linear-gradient(135deg, #1d8795 0%, #3021b6 50%, #06b6d4 100%);
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.footer__link:hover {
+  color: var(--color-primary-light);
+}
+
+/* ===========================================
+     32. SECTIONS CON BORDES REDONDEADOS - MÓDULO 3
+     =========================================== */
+.about__container,
+.projects__container,
+.skills__container,
+.contact__container {
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.projects {
+  background: linear-gradient(
+    135deg,
+    #f9fafb 0%,
+    #ede9fe 100%
+  ); /* Blanco a lila muy claro */
+}
+
+/* 
+  ╔═══════════════════════════════════════════════════════════════════════════╗
+  ║                                                                           ║
+  ║  MÓDULO 4: CÓDIGO NUEVO - FLEXBOX Y CSS GRID                            ║
+  ║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+  ║  A partir de aquí todo es código NUEVO del Módulo 4                     ║
+  ║                                                                           ║
+  ╚═══════════════════════════════════════════════════════════════════════════╝
+  */
+
+/* ===========================================
+     33. HEADER CON FLEXBOX - NUEVO MÓDULO 4
+     =========================================== */
+.header__container {
+  /* NUEVO: Flexbox para header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header__brand {
+  /* Ya no necesitamos text-align center */
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.nav {
+  /* Ya no necesitamos text-align center */
+  text-align: left;
+}
+
+.nav__list {
+  /* NUEVO: Flexbox para navegación */
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav__item {
+  /* Ya no necesitamos display inline-block */
+  display: block;
+  margin: 0;
+}
+
+/* ===========================================
+     34. HERO CON FLEXBOX - MÓDULO 4
+     =========================================== */
+.hero__container {
+  /* NUEVO: Flexbox para centrar contenido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  gap: 2rem;
+}
+
+.hero__actions {
+  /* NUEVO: Flexbox para botones */
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.hero__stats {
+  /* NUEVO: Flexbox para estadísticas */
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  /* Ya no necesitamos display inline-block */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+/* ===========================================
+     35. ABOUT SECTION CON GRID - MÓDULO 4
+     =========================================== */
+.about__container {
+  /* NUEVO: Grid para contenido */
+  display: grid;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.values__list {
+  /* NUEVO: Grid para valores */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 0;
+}
+
+.values__item {
+  /* NUEVO: Flexbox en columna para mejor legibilidad */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.values__icon {
+  /* Icono centrado arriba */
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+/* Título del valor */
+.values__item strong {
+  display: block;
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+/* Descripción del valor */
+.values__item span:last-child {
+  display: block;
+  line-height: 1.5;
+}
+
+/* ===========================================
+     36. PROJECTS CON GRID - MÓDULO 4
+     =========================================== */
+.projects__grid {
+  /* NUEVO: Grid para proyectos */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 20px;
+}
+
+.project {
+  /* NUEVO: Flexbox para contenido del proyecto */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.project__description {
+  /* Hacer que crezca para empujar el contenido hacia abajo */
+  flex-grow: 1;
+}
+
+.project__technologies {
+  /* NUEVO: Flexbox para tags */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  /* Ya no necesitamos margin-right */
+  margin-right: 0;
+}
+
+.project__links {
+  /* NUEVO: Flexbox para enlaces */
+  display: flex;
+  gap: 1rem;
+}
+
+/* ===========================================
+     37. SKILLS CON GRID - MÓDULO 4
+     =========================================== */
+.skills__list {
+  /* NUEVO: Grid para habilidades */
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.skill {
+  /* NUEVO: Grid para cada habilidad */
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.skill__name {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+
+.skill__percentage {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+}
+
+.skill__bar {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-bottom: 0;
+}
+
+.learning__list {
+  /* NUEVO: Grid para lista de aprendizaje */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* ===========================================
+     38. CONTACT CON FLEXBOX - MÓDULO 4
+     =========================================== */
+.contact__methods {
+  /* NUEVO: Flexbox para métodos de contacto */
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.contact__method {
+  /* NUEVO: Flexbox para cada método */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  min-width: 200px;
+}
+
+/* ===========================================
+     39. FOOTER CON FLEXBOX - MÓDULO 4
+     =========================================== */
+.footer__container {
+  /* NUEVO: Flexbox para footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer__nav {
+  /* NUEVO: Flexbox para navegación del footer */
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.footer__link {
+  /* Ya no necesitamos margin lateral */
+  margin: 0;
+}
+
+/* ===========================================
+     40. MEJORAS GENERALES CON FLEXBOX/GRID - MÓDULO 4
+     =========================================== */
+
+/* Centrar mejor el contenido principal */
+.main {
+  /* NUEVO: Flexbox para main */
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* Mejorar el espaciado de las secciones */
+section {
+  /* Ya no necesitamos margin-bottom */
+  margin-bottom: 0;
+}
+
+/* Botón con mejor alineación */
+.button {
+  /* NUEVO: Flexbox inline para botones */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Quote mejorado */
+.quote {
+  /* NUEVO: Grid para cita */
+  display: grid;
+  gap: 1rem;
+}
+
+/* ===========================================
+     41. PROYECTO DESTACADO CON GRID - MÓDULO 4
+     =========================================== */
+.project--featured {
+  /* NUEVO: Span de 2 columnas si hay espacio */
+  grid-column: span 2;
+}
+
+/* Si solo hay 2 proyectos, no hacer span */
+.projects__grid:has(.project:nth-child(2):last-child) .project--featured {
+  grid-column: span 1;
+}
+
+/* ===========================================
+     42. OPTIMIZACIONES FINALES - MÓDULO 4
+     =========================================== */
+
+/* Eliminar margenes innecesarios ahora que usamos gap */
+h2 {
+  margin-top: 0;
+}
+
+.about__intro,
+.about__text {
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70ch;
+}
+
+/* Hero mejorado */
+.hero {
+  /* NUEVO: Min-height para hero */
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* Contenedores con max-width consistente */
+.header__container,
+.hero__container,
+.about__container,
+.projects__container,
+.skills__container,
+.contact__container,
+.footer__container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 
+  ╔═══════════════════════════════════════════════════════════════════════════╗
+  ║                                                                           ║
+  ║  MÓDULO 5: CÓDIGO NUEVO - RESPONSIVE DESIGN                              ║
+  ║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+  ║  A partir de aquí todo es código NUEVO del Módulo 5                     ║
+  ║  Media Queries, Mobile-First, Diseño Fluido                             ║
+  ║                                                                           ║
+  ╚═══════════════════════════════════════════════════════════════════════════╝
+  */
+
+/* ===========================================
+     43. MEDIA QUERIES - NUEVO MÓDULO 5
+     =========================================== */
+
+/* Mobile First - Estilos base ya definidos arriba */
+
+/* ===========================================
+     44. TABLET (768px) - MÓDULO 5
+     =========================================== */
+@media (max-width: 768px) {
+  /* HEADER RESPONSIVE */
+  .header__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .header__brand {
+    text-align: center;
+  }
+
+  .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* HERO RESPONSIVE */
+  .hero__title {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  .hero__subtitle {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .hero__stats {
+    gap: 2rem;
+  }
+
+  /* ABOUT RESPONSIVE */
+  .values__list {
+    grid-template-columns: 1fr;
+  }
+
+  /* PROJECTS RESPONSIVE */
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project--featured {
+    grid-column: span 1;
+  }
+
+  /* CONTACT RESPONSIVE */
+  .contact__methods {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* TIPOGRAFÍA RESPONSIVE */
+  h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  h2 {
+    font-size: 2rem; /* 32px */
+  }
+
+  h3 {
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+/* ===========================================
+     45. MÓVIL (480px) - MÓDULO 5
+     =========================================== */
+@media (max-width: 480px) {
+  /* ESPACIADO GENERAL */
+  body {
+    font-size: 14px;
+  }
+
+  /* PADDING REDUCIDO */
+  .header {
+    padding: 16px 0;
+  }
+
+  section {
+    padding: 32px 0;
+  }
+
+  /* HEADER MÓVIL */
+  .header__name {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  .header__tagline {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  .nav__list {
+    gap: 0.5rem;
+  }
+
+  .nav__link {
+    font-size: 0.875rem; /* 14px */
+    padding: 6px 10px;
+  }
+
+  /* HERO MÓVIL */
+  .hero {
+    min-height: 500px;
+    padding: 48px 0;
+  }
+
+  .hero__title {
+    font-size: 2rem; /* 32px */
+    line-height: 1.2;
+  }
+
+  .hero__subtitle {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .hero__description {
+    font-size: 1rem; /* 16px */
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  .hero__stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .stat__number {
+    font-size: 2rem; /* 32px */
+  }
+
+  /* ABOUT MÓVIL */
+  .about__intro {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .quote {
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .quote__text {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  /* values__item ya está en columna por defecto */
+
+  /* PROJECTS MÓVIL */
+  .project {
+    padding: 1.5rem;
+  }
+
+  .project__title {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  /* SKILLS MÓVIL */
+  .skill__bar {
+    height: 20px;
+  }
+
+  .learning__list {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT MÓVIL */
+  .contact__method {
+    width: 100%;
+  }
+
+  /* FOOTER MÓVIL */
+  .footer__nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer__link {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  /* TIPOGRAFÍA MÓVIL */
+  h1 {
+    font-size: 2rem; /* 32px */
+  }
+
+  h2 {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  h3 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  h4 {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+/* ===========================================
+     46. DESKTOP GRANDE (1400px+) - MÓDULO 5
+     =========================================== */
+@media (min-width: 1400px) {
+  /* CONTENEDORES MÁS ANCHOS */
+  .header__container,
+  .projects__container,
+  .footer__container {
+    max-width: 1400px;
+  }
+
+  /* HERO MÁS GRANDE */
+  .hero {
+    min-height: 700px;
+  }
+
+  .hero__title {
+    font-size: 4rem; /* 64px */
+  }
+
+  .hero__subtitle {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  /* PROJECTS GRID MÁS COLUMNAS */
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===========================================
+     47. ORIENTACIÓN LANDSCAPE - MÓDULO 5
+     =========================================== */
+@media (max-height: 600px) and (orientation: landscape) {
+  /* REDUCIR ALTURAS EN LANDSCAPE */
+  .hero {
+    min-height: 400px;
+  }
+
+  .hero__container {
+    min-height: auto;
+  }
+
+  section {
+    padding: 32px 0;
+  }
+}
+
+/* ===========================================
+     48. PRINT STYLES - MÓDULO 5
+     =========================================== */
+@media print {
+  /* OCULTAR ELEMENTOS NO NECESARIOS */
+  .nav,
+  .hero__actions,
+  .button,
+  .project__links,
+  .contact__methods,
+  .footer__nav {
+    display: none;
+  }
+
+  /* COLORES DE IMPRESIÓN */
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  .hero {
+    background: #f0f0f0;
+    color: #000;
+  }
+
+  /* ELIMINAR SOMBRAS */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* ENLACES EN IMPRESIÓN */
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  /* MOSTRAR URLs */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* EVITAR CORTES DE PÁGINA */
+  .project,
+  .about__container,
+  .skills__container {
+    page-break-inside: avoid;
+  }
+}
+
+/* ===========================================
+     49. PREFERENCIAS DE USUARIO - MÓDULO 5
+     =========================================== */
+
+/* Reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .button:hover,
+  .project:hover,
+  .values__item:hover {
+    transform: none;
+  }
+}
+
+/* ===========================================
+     50. UTILIDADES RESPONSIVE - MÓDULO 5
+     =========================================== */
+
+/* Clases útiles para ocultar/mostrar */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+/* Texto responsive */
+.responsive-text {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem);
+  line-height: clamp(1.5, 2vw + 1.2, 1.8);
+}
+
+/* Espaciado responsive */
+.responsive-padding {
+  padding: clamp(1rem, 5vw, 3rem);
+}
+
+/* Ancho máximo fluido */
+.fluid-container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}

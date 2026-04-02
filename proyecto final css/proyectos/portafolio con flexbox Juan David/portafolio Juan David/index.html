@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan David Berroteran - Portfolio Personal</title>
+  <meta name="description"
+    content="Portfolio personal de Juan David Berroteran Priela. Desarrollador Backend con experiencia en JS, HTML, CSS y PostgreSQL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header con navegación -->
+  <header class="header">
+    <div class="header__container">
+      <div class="header__brand">
+        <h1 class="header__name">Juan David Berroteran</h1>
+        <p class="header__tagline">Desarrollador Backend</p>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#inicio" class="nav__link nav__link--active">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#sobre-mi" class="nav__link">Sobre mí</a>
+          </li>
+          <li class="nav__item">
+            <a href="#proyectos" class="nav__link">Proyectos</a>
+          </li>
+          <li class="nav__item">
+            <a href="#habilidades" class="nav__link">Habilidades</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacto" class="nav__link">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="main">
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="hero__container">
+        <h2 class="hero__title">¡Hola! Soy Juan David Berroteran</h2>
+        <p class="hero__subtitle">Desarrollador Backend</p>
+        <p class="hero__description">
+          Construyo la lógica que mueve las aplicaciones. Mi enfoque:
+          bases de datos eficientes, APIs sólidas y código limpio
+          que escala con las necesidades del negocio.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#proyectos" class="button button--primary">Ver Mis Proyectos</a>
+          <a href="#contacto" class="button button--secondary">Contáctame</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__number">5+</span>
+            <span class="stat__label">Tecnologías</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">3+</span>
+            <span class="stat__label">Proyectos completados</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">VEN 🇻🇪</span>
+            <span class="stat__label">Venezolano</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section class="about" id="sobre-mi">
+      <div class="about__container">
+        <h2 class="about__title">Mi Camino en el Desarrollo Backend</h2>
+
+        <p class="about__intro">
+          Soy <strong>Juan David Berroteran Pirela</strong>, desarrollador backend
+          venezolano apasionado por construir sistemas robustos y eficientes.
+        </p>
+
+        <p class="about__text">
+          Me especializo en el lado del servidor: diseño de bases de datos,
+          construcción de APIs y manejo de la lógica que hace funcionar
+          las aplicaciones desde adentro. Cada línea de código que escribo
+          tiene un propósito claro.
+        </p>
+
+        <blockquote class="quote">
+          <p class="quote__text">
+            "El backend es la columna vertebral de cualquier aplicación.
+            Sin una base sólida, nada de lo que se ve en pantalla
+            tiene valor real."
+          </p>
+          <cite class="quote__author">— Mi filosofía de desarrollo</cite>
+        </blockquote>
+
+        <div class="values">
+          <h3 class="values__title">Mis Valores</h3>
+          <ul class="values__list">
+            <li class="values__item">
+              <span class="values__icon">🎯</span>
+              <strong>Precisión</strong>
+              <span>Código limpio y bien estructurado desde el primer commit</span>
+            </li>
+            <li class="values__item">
+              <span class="values__icon">📚</span>
+              <strong>Aprendizaje continuo</strong>
+              <span>Siempre explorando nuevas herramientas y patrones</span>
+            </li>
+            <li class="values__item">
+              <span class="values__icon">🤝</span>
+              <strong>Colaboración</strong>
+              <span>Trabajo en equipo y comunicación clara con el frontend</span>
+            </li>
+            <li class="values__item">
+              <span class="values__icon">⚡</span>
+              <strong>Rendimiento</strong>
+              <span>Sistemas que responden rápido y escalan bien</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="projects" id="proyectos">
+      <div class="projects__container">
+        <h2 class="projects__title">Mis Proyectos</h2>
+        <p class="projects__description">
+          Cada proyecto representa un reto técnico que me ayudó a crecer
+          como desarrollador backend. Desde APIs REST hasta bases de datos complejas.
+        </p>
+
+        <div class="projects__grid">
+          <article class="project">
+            <h3 class="project__title">API REST con Node.js</h3>
+            <p class="project__description">
+              Construcción de una API RESTful completa con autenticación JWT,
+              manejo de errores centralizado y documentación de endpoints.
+            </p>
+
+            <h4 class="project__subtitle">Lo que aprendí:</h4>
+            <ul class="project__learnings">
+              <li>Diseño de rutas y controladores</li>
+              <li>Middleware de autenticación</li>
+              <li>Validación de datos de entrada</li>
+              <li>Manejo de errores HTTP</li>
+              <li>Variables de entorno y configuración</li>
+            </ul>
+
+            <div class="project__technologies">
+              <span class="tag">Node.js</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+
+            <div class="project__links">
+              <a href="#" class="project__link">Ver proyecto</a>
+              <a href="#" class="project__link">Ver código</a>
+            </div>
+          </article>
+
+          <article class="project project--featured">
+            <span class="project__badge">Destacado</span>
+            <h3 class="project__title">Sistema de Gestión con PostgreSQL</h3>
+            <p class="project__description">
+              Base de datos relacional diseñada para gestión de usuarios y recursos.
+              Incluye consultas optimizadas, relaciones complejas e índices estratégicos.
+            </p>
+
+            <h4 class="project__subtitle">Características:</h4>
+            <ul class="project__learnings">
+              <li>Modelado de datos relacional</li>
+              <li>Consultas SQL optimizadas</li>
+              <li>Transacciones y consistencia</li>
+              <li>Procedimientos almacenados</li>
+              <li>Migraciones de base de datos</li>
+            </ul>
+
+            <div class="project__technologies">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Node.js</span>
+            </div>
+
+            <div class="project__links">
+              <a href="#" class="project__link">Ver proyecto</a>
+              <a href="#" class="project__link">Ver código</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">Portfolio Personal</h3>
+            <p class="project__description">
+              Este mismo portfolio que estás viendo. Aunque me especializo en backend,
+              domino HTML y CSS para presentar mi trabajo de forma profesional.
+            </p>
+
+            <h4 class="project__subtitle">Enfoque:</h4>
+            <ul class="project__learnings">
+              <li>HTML semántico y accesible</li>
+              <li>CSS moderno con metodología BEM</li>
+              <li>Diseño responsivo</li>
+              <li>Buenas prácticas de estructura</li>
+              <li>Optimización de rendimiento</li>
+            </ul>
+
+            <div class="project__technologies">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+            
+            </div>
+
+            <div class="project__links">
+              <a href="#" class="project__link">Ver proyecto</a>
+              <a href="#" class="project__link">Ver código</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="skills" id="habilidades">
+      <div class="skills__container">
+        <h2 class="skills__title">Mis Habilidades</h2>
+
+        <h3 class="skills__subtitle">Tecnologías que manejo</h3>
+
+        <div class="skills__list">
+          <div class="skill">
+            <h4 class="skill__name">JavaScript</h4>
+            <div class="skill__bar">
+              <div class="skill__progress skill__progress--js"></div>
+            </div>
+            <span class="skill__percentage">75%</span>
+          </div>
+
+          <div class="skill">
+            <h4 class="skill__name">PostgreSQL</h4>
+            <div class="skill__bar">
+              <div class="skill__progress skill__progress--sql"></div>
+            </div>
+            <span class="skill__percentage">70%</span>
+          </div>
+
+          <div class="skill">
+            <h4 class="skill__name">HTML5 & CSS3</h4>
+            <div class="skill__bar">
+              <div class="skill__progress skill__progress--html"></div>
+            </div>
+            <span class="skill__percentage">60%</span>
+          </div>
+        </div>
+
+        <div class="learning">
+          <h3 class="learning__title">Actualmente aprendiendo:</h3>
+          <ul class="learning__list">
+            <li class="learning__item">APIs RESTful avanzadas</li>
+            <li class="learning__item">Autenticación y seguridad</li>
+            <li class="learning__item">ORM y query builders</li>
+            <li class="learning__item">Testing backend</li>
+            <li class="learning__item">Despliegue y DevOps básico</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact" id="contacto">
+      <div class="contact__container">
+        <h2 class="contact__title">¿Te gustaría conectar?</h2>
+        <p class="contact__description">
+          Estoy abierto a nuevas oportunidades, colaboraciones y proyectos.
+          No dudes en escribirme, con gusto hablamos.
+        </p>
+
+        <div class="contact__methods">
+          <div class="contact__method">
+            <h3 class="contact__method-title">📞 Teléfono</h3>
+            <a href="tel:3227207889" class="contact__link">
+              322 720 7889
+            </a>
+          </div>
+
+          <div class="contact__method">
+            <h3 class="contact__method-title">💻 GitHub</h3>
+            <a href="https://github.com/JuanBerro-back" class="contact__link">
+              @juandavidberroteran
+            </a>
+          </div>
+
+          <div class="contact__method">
+            <h3 class="contact__method-title">💼 LinkedIn</h3>
+            <a href="https://linkedin.com/in/juandavidberroteran" class="contact__link">
+              /in/juandavidberroteran
+            </a>
+          </div>
+        </div>
+
+        <a href="#" class="button button--primary button--large">
+          📄 Descargar CV (PDF)
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <nav class="footer__nav">
+        <a href="#inicio" class="footer__link">Inicio</a>
+        <a href="#sobre-mi" class="footer__link">Sobre mí</a>
+        <a href="#proyectos" class="footer__link">Proyectos</a>
+        <a href="#habilidades" class="footer__link">Habilidades</a>
+        <a href="#contacto" class="footer__link">Contacto</a>
+      </nav>
+
+      <p class="footer__copyright">
+        © 2026 Juan David Berroteran Priela - Portfolio Personal
+      </p>
+
+      <p class="footer__credits">
+        Desarrollador Backend 🇻🇪 — Construido con HTML y CSS
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

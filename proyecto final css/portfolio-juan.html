@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juan David Berroteran — Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── Cursor ── -->
+<div class="cursor" id="cursor"></div>
+
+<!-- ── WebGL ── -->
+<div id="webGLApp"></div>
+
+
+<header class="header">
+  <div class="brand">
+    <span class="brand__name">Juan David Berroteran</span>
+    <span class="brand__role">backend_developer</span>
+  </div>
+
+  <!-- Desktop nav -->
+  <nav class="nav" id="desktopNav">
+    <a href="#inicio"      class="nav__btn active" data-section="inicio">Inicio</a>
+    <a href="#sobre-mi"    class="nav__btn"         data-section="sobre-mi">Sobre&nbsp;mí</a>
+    <a href="#proyectos"   class="nav__btn"         data-section="proyectos">Proyectos</a>
+    <a href="#habilidades" class="nav__btn"         data-section="habilidades">Habilidades</a>
+    <a href="#contacto"    class="nav__btn"         data-section="contacto">Contacto</a>
+    <a href="https://www.youtube.com/watch?v=WIRK_pGdIdA&list=RDWIRK_pGdIdA&start_radio=1&t=213s"    class="nav__btn"        >final</a>
+  </nav>
+
+  <!-- Hamburger (mobile) -->
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio"      class="nav__btn" data-section="inicio">Inicio</a>
+  <a href="#sobre-mi"    class="nav__btn" data-section="sobre-mi">Sobre mí</a>
+  <a href="#proyectos"   class="nav__btn" data-section="proyectos">Proyectos</a>
+  <a href="#habilidades" class="nav__btn" data-section="habilidades">Habilidades</a>
+  <a href="#contacto"    class="nav__btn" data-section="contacto">Contacto</a>
+  <a href="#contacto"    class="nav__btn" data-section="contacto">Contacto</a>
+</div>
+
+<!-- Color scheme buttons -->
+<div class="scheme-controls">
+  <button class="s-btn active" data-scheme="1">S1</button>
+  <button class="s-btn"        data-scheme="2">S2</button>
+  <button class="s-btn"        data-scheme="3">S3</button>
+  <button class="s-btn"        data-scheme="4">S4</button>
+  <button class="s-btn"        data-scheme="5">S5</button>
+</div>
+
+
+<div class="sections">
+
+  <!-- INICIO -->
+  <section class="section active" id="inicio">
+    <div class="card">
+      <div class="tech-orbit" aria-hidden="true">
+        <span class="tech-badge">Javascript</span>
+        <span class="tech-badge">Css</span>
+        <span class="tech-badge">Html</span>
+      </div>
+
+      <p class="hero__eyebrow">backend_developer </p>
+      <h2 class="sec-title">¡Hola!<br>Soy <em>Juan David</em><br><span class="teal">Berroteran</span></h2>
+      <p class="hero__desc">
+        Construyo la lógica que mueve las aplicaciones. Mi enfoque:
+        bases de datos eficientes, APIs sólidas y código limpio que
+        escala con las necesidades del negocio.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--fill nav-trigger" data-section="proyectos">Ver Mis Proyectos</a>
+        <a class="btn btn--ghost nav-trigger" data-section="contacto">Contáctame</a>
+      </div>
+
+      <div class="hero__stats">
+        <div>
+          <span class="stat__num">5+</span>
+          <span class="stat__lbl">Tecnologías</span>
+        </div>
+        <div>
+          <span class="stat__num">3+</span>
+          <span class="stat__lbl">mini Proyectos completados</span>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="section" id="sobre-mi">
+    <div class="card">
+      <p class="sec-label">sobre_mi.md</p>
+      <h2 class="sec-title">Mi Camino en el <em>Backend</em></h2>
+
+      <p class="about__body">
+        Soy <strong>Juan David Berroteran Pirela</strong>, desarrollador backend 
+        
+        apasionado por construir sistemas robustos y eficientes.
+      </p>
+      <p class="about__body">
+        Me especializo en el lado del servidor: diseño de bases de datos, construcción de APIs
+        y manejo de la lógica que hace funcionar las aplicaciones desde adentro.
+        Cada línea de código que escribo tiene un propósito claro.
+      </p>
+
+      <blockquote class="quote">
+        <p>"Aquellos que no pueden recordar el pasado están condenados a repetirlo"</p>
+        <p>"o sea si funciona no lo toque no vuelva a borrar codigo "</p>
+        <cite>— Mi filosofía de desarrollo</cite>
+      </blockquote>
+
+      <div class="values">
+        <div class="value-card">
+          <span class="value-card__icon">🎯</span>
+          <strong class="value-card__name">Precisión</strong>
+          <span class="value-card__text">Código limpio y bien estructurado desde el primer commit</span>
+        </div>
+        <div class="value-card">
+          <span class="value-card__icon">📚</span>
+          <strong class="value-card__name">Aprendizaje continuo</strong>
+          <span class="value-card__text">Siempre explorando nuevas herramientas y patrones</span>
+        </div>
+        <div class="value-card">
+          <span class="value-card__icon">🤝</span>
+          <strong class="value-card__name">Colaboración</strong>
+          <span class="value-card__text">Trabajo en equipo y comunicación clara con el frontend</span>
+        </div>
+        <div class="value-card">
+          <span class="value-card__icon">⚡</span>
+          <strong class="value-card__name">Rendimiento</strong>
+          <span class="value-card__text">Sistemas que responden rápido y escalan bien</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section" id="proyectos">
+    <div class="card" style="max-width:1000px;">
+      <p class="sec-label">proyectos css</p>
+      <h2 class="sec-title">Mis <em>Proyectos</em></h2>
+      <p style="font-size:.85rem;color:var(--w60);font-weight:300;line-height:1.7;margin-bottom:.2rem;">
+        algunos de los talleres de CSS de JOTAJOTA
+      </p>
+
+      <div class="projects__grid">
+
+        <article class="proj">
+          <h3 class="proj__title">portafolio resposive con css</h3>
+          <p class="proj__desc">portafolio re bonito</p>
+          <p class="proj__sub">// Lo que aprendí</p>
+          <ul class="proj__list">
+            <li>layout</li>
+            <li>cambio de letra</li>
+            <li>colores dinamicos</li>
+          
+          </ul>
+          <div class="proj__tags">
+            <span class="tag">css</span>
+            <span class="tag">html</span>
+            <span class="tag">miguelito al lado </span>
+          </div>
+          <div class="proj__links">
+            <a href="\proyectos\Juan David Berrotean portafolio responsive\portafolio Juan David\index.html" class="proj__link">Ver proyecto</a>
+            <a href="https://codepen.io/Juan-Berroteran/pen/NPRgmqp" class="proj__link">Ver código</a>
+          </div>
+        </article>
+
+        <article class="proj proj--feat">
+          <span class="proj__badge">taller anterior</span>
+          <h3 class="proj__title">portafolio</h3>
+          <p class="proj__desc">portafolio con flexbox</p>
+          <p class="proj__sub">manejo de grid y layout </p>
+          <ul class="proj__list">
+            <li>flexbox</li>
+           
+          </ul>
+          <div class="proj__tags">
+       
+            <span class="tag">html</span>
+            <span class="tag">css</span>
+          </div>
+          <div class="proj__links">
+            <a href="\proyectos\portafolio con flexbox Juan David\portafolio Juan David\index.html" class="proj__link">Ver proyecto</a>
+            <a href="https://codepen.io/Juan-Berroteran/pen/emdRopr" class="proj__link">Ver código</a>
+          </div>
+        </article>
+
+        <article class="proj">
+          <h3 class="proj__title">Portfolio Personal</h3>
+          <p class="proj__desc">Este mismo portfolio. Aunque me especializo en backend, domino HTML y CSS para presentar mi trabajo de forma profesional.</p>
+          <p class="proj__sub">// Enfoque</p>
+          <ul class="proj__list">
+            <li>HTML semántico y accesible</li>
+            <li>CSS moderno con BEM</li>
+            <li>Diseño responsivo</li>
+            <li>Optimización de rendimiento</li>
+          </ul>
+          <div class="proj__tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+          </div>
+          <div class="proj__links">
+            <a href="#" class="proj__link">Ver proyecto</a>
+            <a href="#" class="proj__link">Ver código</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="section" id="habilidades">
+    <div class="card">
+      <p class="sec-label">skills.config</p>
+      <h2 class="sec-title">Mis <em>Habilidades</em></h2>
+
+      <div class="skills-layout">
+        <div>
+          <p class="skills__sub">// tecnologías_que_manejo</p>
+          <div class="skill-list">
+            <div>
+              <div class="skill__row">
+                <span class="skill__name">JavaScript</span>
+                <span class="skill__pct">75%</span>
+              </div>
+              <div class="skill__track"><div class="skill__fill fill-75"></div></div>
+            </div>
+            <div>
+              <div class="skill__row">
+                <span class="skill__name">PostgreSQL</span>
+                <span class="skill__pct">70%</span>
+              </div>
+              <div class="skill__track"><div class="skill__fill fill-70"></div></div>
+            </div>
+            <div>
+              <div class="skill__row">
+                <span class="skill__name">HTML5 &amp; CSS3</span>
+                <span class="skill__pct">60%</span>
+              </div>
+              <div class="skill__track"><div class="skill__fill fill-60"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="learn__title">// actualmente_aprendiendo</p>
+          <ul class="learn-list">
+            <li class="learn-item">APIs RESTful avanzadas</li>
+            <li class="learn-item">Autenticación y seguridad</li>
+            <li class="learn-item">ORM y query builders</li>
+            <li class="learn-item">Testing backend</li>
+            <li class="learn-item">Despliegue y DevOps básico</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="card">
+      <p class="sec-label">contacto.sh</p>
+      <h2 class="sec-title">¿Te gustaría <em>conectar</em>?</h2>
+      <p class="contact__desc">
+        Estoy abierto a nuevas oportunidades, colaboraciones y proyectos.
+        No dudes en escribirme, con gusto hablamos.
+      </p>
+
+      <div class="contact__grid">
+        <div class="c-card">
+          <span class="c-card__title">📞 TELÉFONO</span>
+          <a href="tel:3227207889" class="c-card__link">322 720 7889</a>
+        </div>
+        <div class="c-card">
+          <span class="c-card__title">💻 GITHUB</span>
+          <a href="https://github.com/JuanBerro-back" class="c-card__link">@juandavidberroteran</a>
+        </div>
+        <div class="c-card">
+          <span class="c-card__title">💼 LINKEDIN</span>
+          <a href="https://linkedin.com/in/juandavidberroteran" class="c-card__link">/in/juandavidberroteran</a>
+        </div>
+      </div>
+
+      <a href="#" class="btn btn--fill">📄 Descargar CV (PDF)</a>
+    </div>
+  </section>
+
+</div>
+<footer class="footer">
+  <span class="footer__copy">© 2026 Juan David Berroteran Pirela</span>
+  <span class="footer__flag">Backend Dev</span>
+  <nav class="footer__nav">
+   
+  </nav>
+</footer>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
