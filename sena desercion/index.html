@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RetainAI SENA | Análisis de Deserción con Inteligencia Artificial</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ═══════ NAV ═══════ -->
+  <nav class="nav" id="navbar">
+    <div class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+          <path d="M24 4 L40 11 L40 27 C40 36 32 43 24 46 C16 43 8 36 8 27 L8 11 Z"
+                fill="rgba(56,189,248,0.12)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="24" cy="22" r="5" fill="var(--accent)"/>
+          <circle cx="14" cy="16" r="2.5" fill="var(--accent)" opacity="0.65"/>
+          <circle cx="34" cy="16" r="2.5" fill="var(--accent)" opacity="0.65"/>
+          <circle cx="14" cy="28" r="2.5" fill="var(--accent)" opacity="0.65"/>
+          <circle cx="34" cy="28" r="2.5" fill="var(--accent)" opacity="0.65"/>
+          <line x1="19.2" y1="20" x2="16.3" y2="17.6" stroke="var(--accent)" stroke-width="1.5"/>
+          <line x1="28.8" y1="20" x2="31.7" y2="17.6" stroke="var(--accent)" stroke-width="1.5"/>
+          <line x1="19.2" y1="24" x2="16.3" y2="26.4" stroke="var(--accent)" stroke-width="1.5"/>
+          <line x1="28.8" y1="24" x2="31.7" y2="26.4" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="24" y="39" text-anchor="middle" fill="var(--accent)" font-size="5.5" font-weight="800"
+                font-family="Plus Jakarta Sans, sans-serif" letter-spacing="0.8">AI</text>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Retain<span class="logo-accent">AI</span></span>
+        <span class="logo-tag">SENA · ADSO 3139687</span>
+      </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#problema">Problema</a></li>
+      <li><a href="#solucion">Solución IA</a></li>
+      <li><a href="#metodologia">Metodología</a></li>
+      <li><a href="#sena">SENA</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════ HERO ═══════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <canvas id="particleCanvas"></canvas>
+      <div class="hero-grid"></div>
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Proyecto de Grado · ADSO 3139687 · SENA Colombia
+      </div>
+      <h1 class="hero-title reveal">
+        Menos deserción.<br/>
+        Más <em>inteligencia</em><br/>
+        de datos.
+      </h1>
+      <p class="hero-sub reveal">
+        <strong>RetainAI</strong> es una plataforma de inteligencia artificial que detecta, analiza y previene la deserción estudiantil en el SENA, transformando datos en decisiones que retienen aprendices.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#solucion" class="btn-primary">Explorar la Solución <span class="btn-arrow">→</span></a>
+        <a href="#equipo" class="btn-ghost">Conocer el Equipo</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat-item">
+          <div class="stat-top"><span class="stat-num" data-target="48">0</span><span class="stat-unit">%</span></div>
+          <span class="stat-label">Tasa de deserción promedio</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-top"><span class="stat-num" data-target="1200">0</span><span class="stat-unit">K+</span></div>
+          <span class="stat-label">Aprendices en riesgo anual</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-top"><span class="stat-num" data-target="117">0</span><span class="stat-unit">+</span></div>
+          <span class="stat-label">Centros de formación</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="dashboard-mockup">
+        <div class="dm-header">
+          <div class="dm-dots"><span></span><span></span><span></span></div>
+          <span class="dm-title">RetainAI — Panel de Análisis</span>
+        </div>
+        <div class="dm-body">
+          <div class="dm-chart-area">
+            <div class="dm-label">Deserción por Trimestre</div>
+            <div class="dm-bars">
+              <div class="dm-bar" style="--h:55%;--delay:0.1s"><span>Q1</span></div>
+              <div class="dm-bar" style="--h:70%;--delay:0.2s"><span>Q2</span></div>
+              <div class="dm-bar" style="--h:45%;--delay:0.3s"><span>Q3</span></div>
+              <div class="dm-bar active" style="--h:80%;--delay:0.4s"><span>Q4</span></div>
+              <div class="dm-bar" style="--h:38%;--delay:0.5s"><span>Q5</span></div>
+              <div class="dm-bar" style="--h:60%;--delay:0.6s"><span>Q6</span></div>
+            </div>
+          </div>
+          <div class="dm-cards">
+            <div class="dm-card dm-card--alert">
+              <div class="dm-card-icon">⚠️</div>
+              <div class="dm-card-info">
+                <span class="dm-card-val">342</span>
+                <span class="dm-card-desc">En riesgo alto</span>
+              </div>
+            </div>
+            <div class="dm-card dm-card--ok">
+              <div class="dm-card-icon">✅</div>
+              <div class="dm-card-info">
+                <span class="dm-card-val">78%</span>
+                <span class="dm-card-desc">Retención lograda</span>
+              </div>
+            </div>
+          </div>
+          <div class="dm-motivos">
+            <div class="dm-label">Motivos principales</div>
+            <div class="dm-motive"><span class="dm-motive-label">Económico</span><span class="dm-motive-bar" style="--w:82%"></span><b>82%</b></div>
+            <div class="dm-motive"><span class="dm-motive-label">Laboral</span><span class="dm-motive-bar" style="--w:67%"></span><b>67%</b></div>
+            <div class="dm-motive"><span class="dm-motive-label">Personal</span><span class="dm-motive-bar" style="--w:54%"></span><b>54%</b></div>
+            <div class="dm-motive"><span class="dm-motive-label">Académico</span><span class="dm-motive-bar" style="--w:40%"></span><b>40%</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ PROBLEMA ═══════ -->
+  <section class="section problema" id="problema">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-tag">El Problema</span>
+        <h2>¿Por qué desertan los aprendices del SENA?</h2>
+        <p>La deserción no es un solo factor. Es una cadena de condiciones que, sin identificarse a tiempo, se vuelve inevitable.</p>
+      </div>
+      <div class="causas-grid">
+        <div class="causa-card reveal" style="--delay:0s"><div class="causa-icon">💸</div><h3>Factores Económicos</h3><p>La necesidad de generar ingresos obliga a los aprendices a abandonar su formación. La presión financiera es el principal detonante.</p><div class="causa-pct"><div class="pct-bar"><div class="pct-fill" style="--pct:82%"></div></div><span>82% de los casos</span></div></div>
+        <div class="causa-card reveal" style="--delay:0.1s"><div class="causa-icon">👷</div><h3>Carga Laboral</h3><p>Muchos aprendices trabajan jornadas completas. La incompatibilidad de horarios genera abandono progresivo.</p><div class="causa-pct"><div class="pct-bar"><div class="pct-fill" style="--pct:67%"></div></div><span>67% de los casos</span></div></div>
+        <div class="causa-card reveal" style="--delay:0.2s"><div class="causa-icon">🏠</div><h3>Situación Personal</h3><p>Problemas familiares, de salud, embarazo o migración impiden la continuidad en el proceso de formación.</p><div class="causa-pct"><div class="pct-bar"><div class="pct-fill" style="--pct:54%"></div></div><span>54% de los casos</span></div></div>
+        <div class="causa-card reveal" style="--delay:0.3s"><div class="causa-icon">📚</div><h3>Bajo Rendimiento</h3><p>Dificultades con los contenidos, falta de bases previas o desmotivación académica conducen al retiro voluntario.</p><div class="causa-pct"><div class="pct-bar"><div class="pct-fill" style="--pct:40%"></div></div><span>40% de los casos</span></div></div>
+        <div class="causa-card reveal" style="--delay:0.4s"><div class="causa-icon">🌍</div><h3>Distancia Geográfica</h3><p>La lejanía del centro de formación, especialmente en zonas rurales, dificulta el acceso regular y constante.</p><div class="causa-pct"><div class="pct-bar"><div class="pct-fill" style="--pct:35%"></div></div><span>35% de los casos</span></div></div>
+        <div class="causa-card reveal" style="--delay:0.5s"><div class="causa-icon">🤝</div><h3>Falta de Acompañamiento</h3><p>Sin seguimiento personalizado, el aprendiz queda sin red de apoyo ante las primeras dificultades.</p><div class="causa-pct"><div class="pct-bar"><div class="pct-fill" style="--pct:48%"></div></div><span>48% de los casos</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ SOLUCIÓN ═══════ -->
+  <section class="section solucion" id="solucion">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-tag">Solución con IA</span>
+        <h2>Inteligencia Artificial al servicio de la retención</h2>
+        <p>RetainAI aplica modelos de machine learning y análisis predictivo para detectar señales tempranas de abandono.</p>
+      </div>
+      <div class="ia-features">
+        <div class="ia-feature reveal" style="--delay:0s"><div class="ia-feature-num">01</div><div class="ia-feature-body"><h3>Detección Predictiva</h3><p>El modelo analiza asistencia, calificaciones, participación y contexto socioeconómico para calcular la probabilidad de deserción antes de que ocurra.</p></div></div>
+        <div class="ia-feature reveal" style="--delay:0.1s"><div class="ia-feature-num">02</div><div class="ia-feature-body"><h3>Análisis de Motivos</h3><p>Mediante NLP, la IA clasifica y jerarquiza los principales motivos de deserción por centro, programa y período académico.</p></div></div>
+        <div class="ia-feature reveal" style="--delay:0.2s"><div class="ia-feature-num">03</div><div class="ia-feature-body"><h3>Generación de Informes</h3><p>Informes automáticos con visualizaciones interactivas que presentan conclusiones claras para instructores, coordinadores y directivos.</p></div></div>
+        <div class="ia-feature reveal" style="--delay:0.3s"><div class="ia-feature-num">04</div><div class="ia-feature-body"><h3>Alertas Tempranas</h3><p>Cuando un aprendiz supera umbrales de riesgo, el sistema notifica al equipo de bienestar para una intervención oportuna.</p></div></div>
+      </div>
+      <div class="ia-flow reveal">
+        <div class="flow-step"><div class="flow-icon">📊</div><span>Datos SENA</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="flow-icon">🤖</div><span>Modelo IA</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="flow-icon">📈</div><span>Análisis</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="flow-icon">📋</div><span>Informe</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step flow-step--highlight"><div class="flow-icon">🎯</div><span>Acción</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ METODOLOGÍA ═══════ -->
+  <section class="section metodologia" id="metodologia">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-tag">Metodología</span>
+        <h2>Cómo funciona RetainAI</h2>
+        <p>Un proceso riguroso de cuatro fases desde la recolección de datos hasta la entrega del informe final.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal" style="--delay:0s"><div class="tl-dot"></div><div class="tl-content"><span class="tl-phase">Fase 1</span><h3>Recolección y Limpieza de Datos</h3><p>Integración con bases de datos del SENA. Limpieza, normalización y estructuración del dataset para entrenamiento del modelo.</p><ul><li>Extracción de datos históricos</li><li>Tratamiento de valores nulos</li><li>Normalización de variables</li></ul></div></div>
+        <div class="tl-item reveal" style="--delay:0.1s"><div class="tl-dot"></div><div class="tl-content"><span class="tl-phase">Fase 2</span><h3>Entrenamiento del Modelo de IA</h3><p>Comparación de algoritmos supervisados (Random Forest, XGBoost, Redes Neuronales). Validación cruzada y ajuste de hiperparámetros.</p><ul><li>Selección de features relevantes</li><li>Entrenamiento con datos históricos</li><li>Evaluación: precisión, recall, F1</li></ul></div></div>
+        <div class="tl-item reveal" style="--delay:0.2s"><div class="tl-dot"></div><div class="tl-content"><span class="tl-phase">Fase 3</span><h3>Análisis y Visualización</h3><p>Dashboards interactivos con gráficos de tendencia, mapas de calor y tablas de riesgo individual por prioridad.</p><ul><li>Ranking de aprendices en riesgo</li><li>Mapa por centro y programa</li><li>Segmentación por motivo</li></ul></div></div>
+        <div class="tl-item reveal" style="--delay:0.3s"><div class="tl-dot"></div><div class="tl-content"><span class="tl-phase">Fase 4</span><h3>Informe y Recomendaciones</h3><p>Entrega de informe técnico y ejecutivo con hallazgos principales, causalidades y recomendaciones estratégicas.</p><ul><li>Informe automático en PDF</li><li>Conclusiones por programa</li><li>Plan de acción sugerido</li></ul></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ SENA ═══════ -->
+  <section class="section sena-section" id="sena">
+    <div class="section-inner sena-inner">
+      <div class="sena-logo-block reveal">
+        <div class="sena-logo">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <circle cx="60" cy="60" r="55" fill="var(--accent-glow)"/>
+            <circle cx="60" cy="60" r="55" stroke="var(--accent)" stroke-width="3"/>
+            <path d="M30 75 Q60 20 90 75" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <path d="M25 75 L95 75" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+            <text x="60" y="100" text-anchor="middle" fill="var(--accent)" font-size="18" font-weight="800" font-family="Plus Jakarta Sans, sans-serif">SENA</text>
+          </svg>
+        </div>
+        <div class="sena-info">
+          <span class="section-tag">Sobre la Institución</span>
+          <h2>Servicio Nacional de Aprendizaje</h2>
+          <p class="sena-desc">El SENA es un establecimiento público colombiano de orden nacional, adscrito al Ministerio del Trabajo. Ofrece formación profesional integral gratuita a millones de colombianos, siendo el motor del desarrollo técnico y tecnológico del país.</p>
+          <div class="sena-datos">
+            <div class="sena-dato"><strong>Fundación</strong><span>1957 · Bogotá, Colombia</span></div>
+            <div class="sena-dato"><strong>Misión</strong><span>Invertir en el desarrollo social y técnico de los trabajadores colombianos</span></div>
+            <div class="sena-dato"><strong>Cobertura</strong><span>33 regionales · 117 centros de formación</span></div>
+            <div class="sena-dato"><strong>Aprendices</strong><span>Más de 3 millones de matrículas anuales</span></div>
+            <div class="sena-dato"><strong>Programas</strong><span>Técnicos, Tecnólogos, Especialización Tecnológica</span></div>
+            <div class="sena-dato"><strong>Web oficial</strong><span><a href="https://www.sena.edu.co" target="_blank" rel="noopener">www.sena.edu.co</a></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sena-mision-vision reveal">
+        <div class="mv-card"><h4>🎯 Misión del Proyecto</h4><p>Diseñar e implementar una herramienta basada en inteligencia artificial que permita al SENA identificar patrones de deserción, analizar sus causas y generar informes que orienten decisiones institucionales para mejorar la retención de aprendices.</p></div>
+        <div class="mv-card"><h4>🔭 Visión del Proyecto</h4><p>Convertirse en la plataforma de referencia para el análisis de deserción en instituciones técnicas y tecnológicas de Colombia, escalable a todos los centros de formación del SENA.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ EQUIPO ═══════ -->
+  <section class="section equipo-section" id="equipo">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-tag">Equipo del Proyecto</span>
+      <h2>Las personas detrás de RetainAI</h2>
+      <p>Aprendices del programa <strong>Análisis y Desarrollo de Software · Ficha ADSO 3139687</strong> del SENA, comprometidos con innovar en la educación técnica colombiana.</p>
+    </div>
+
+    <div class="team-grid">
+
+      <div class="team-card reveal" style="--delay:0s">
+        <div class="team-card-top tc-scrum">
+          <div class="team-role-badge">Scrum Master</div>
+          <div class="team-photo-wrap">
+            <div class="team-photo-placeholder">
+              <img src="454400928_3002786583196466_5290977381548284518_n.jpg" alt="Foto de Juan Berroteran" class="team-img">
+            </div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-role-pill tc-pill-scrum">Scrum Master</div>
+          <h3 class="team-name">Juan Berroteran</h3>
+          <p class="team-desc">Lidera la gestión ágil del proyecto, facilita los sprints, remueve impedimentos y garantiza la entrega continua de valor al cliente.</p>
+          <div class="team-ficha"><span>🎓</span><span>ADSO · Ficha <strong>3139687</strong></span></div>
+        </div>
+      </div>
+
+      <div class="team-card reveal" style="--delay:0.1s">
+        <div class="team-card-top tc-po"> <div class="team-role-badge">Product Owner</div>
+          <div class="team-photo-wrap">
+            <div class="team-photo-placeholder">
+              <img src="kamilo.jpeg" alt="Foto de Kamilo" class="team-img">
+            </div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-role-pill tc-pill-po">Product Owner</div>
+          <h3 class="team-name">Kamilo</h3>
+          <p class="team-desc">Responsable de maximizar el valor del producto y gestionar el Product Backlog. Define la visión, prioriza necesidades y asegura que se cumplan los objetivos.</p>
+          <div class="team-ficha"><span>🎓</span><span>ADSO · Ficha <strong>3139687</strong></span></div>
+        </div>
+      </div>
+
+      <div class="team-card reveal" style="--delay:0.2s">
+        <div class="team-card-top tc-dev">
+          <div class="team-role-badge">Desarrollador</div>
+          <div class="team-photo-wrap">
+            <div class="team-photo-placeholder">
+              <img src="miguelangel.jpeg" alt="Foto Desarrollador" class="team-img">
+            </div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-role-pill tc-pill-dev">Desarrollador</div>
+          <h3 class="team-name">miguel angel</h3>
+          <p class="team-desc">Diseña y construye los módulos de la plataforma, incluyendo la integración de los modelos de IA, APIs y el frontend de RetainAI.</p>
+          <div class="team-ficha"><span>🎓</span><span>ADSO · Ficha <strong>3139687</strong></span></div>
+        </div>
+      </div>
+
+      <div class="team-card reveal" style="--delay:0.3s">
+        <div class="team-card-top tc-team">
+          <div class="team-role-badge">Equipo de Trabajo</div>
+          <div class="team-photo-wrap">
+            <div class="team-photo-placeholder">
+              <img src="mota.jpeg" alt="Foto de mota" class="team-img">
+            </div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-role-pill tc-pill-team">Equipo de Trabajo</div>
+          <h3 class="team-name">Mota</h3>
+          <p class="team-desc">Participa en análisis de datos, pruebas funcionales y documentación técnica del sistema predictivo RetainAI.</p>
+          <div class="team-ficha"><span>🎓</span><span>ADSO · Ficha <strong>3139687</strong></span></div>
+        </div>
+      </div>
+
+      <div class="team-card reveal" style="--delay:0.4s">
+        <div class="team-card-top tc-team">
+          <div class="team-role-badge">Equipo de Trabajo</div>
+          <div class="team-photo-wrap">
+            <div class="team-photo-placeholder">
+              <img src="keiner.jpeg" alt="Foto de mota" class="team-img">
+            </div>
+          </div>
+        </div>
+        <div class="team-card-body">
+     
+          <div class="team-role-pill tc-pill-team">Equipo de Trabajo</div>
+          <h3 class="team-name">keiner</h3>
+          <p class="team-desc">Apoya el diseño UX/UI, levantamiento de requerimientos y validación de los resultados del modelo predictivo.</p>
+          <div class="team-ficha"><span>🎓</span><span>ADSO · Ficha <strong>3139687</strong></span></div>
+        </div>
+      </div>
+
+      <div class="team-card team-card--cliente reveal" style="--delay:0.5s">
+        <div class="team-card-top tc-cliente">
+          <div class="team-role-badge">Cliente</div>
+          <div class="team-photo-wrap">
+            <div class="team-photo-placeholder">
+              <img src="sena.jpeg" alt="Foto de mota" class="team-img">
+            </div>
+          </div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-role-pill tc-pill-cliente">Cliente</div>
+          <h3 class="team-name">SENA Colombia</h3>
+          <p class="team-desc">Institución beneficiaria. Provee el contexto institucional y los datos necesarios para la implementación de RetainAI.</p>
+          <div class="team-ficha team-ficha--sena"><span>🏛️</span><span>Bucaramanga, Colombia · <strong>Desde 1957</strong></span></div>
+        </div>
+      </div>
+
+    </div> 
+  </div>
+   </section>
+  <!-- ═══════ CTA ═══════ -->
+  <section class="section cta-section" id="contacto">
+    <div class="cta-inner reveal">
+      <div class="cta-logo">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="46" height="46">
+          <path d="M24 4 L40 11 L40 27 C40 36 32 43 24 46 C16 43 8 36 8 27 L8 11 Z"
+                fill="rgba(56,189,248,0.12)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="24" cy="22" r="5" fill="var(--accent)"/>
+          <circle cx="14" cy="16" r="2.5" fill="var(--accent)" opacity="0.65"/>
+          <circle cx="34" cy="16" r="2.5" fill="var(--accent)" opacity="0.65"/>
+          <circle cx="14" cy="28" r="2.5" fill="var(--accent)" opacity="0.65"/>
+          <circle cx="34" cy="28" r="2.5" fill="var(--accent)" opacity="0.65"/>
+          <line x1="19.2" y1="20" x2="16.3" y2="17.6" stroke="var(--accent)" stroke-width="1.5"/>
+          <line x1="28.8" y1="20" x2="31.7" y2="17.6" stroke="var(--accent)" stroke-width="1.5"/>
+          <line x1="19.2" y1="24" x2="16.3" y2="26.4" stroke="var(--accent)" stroke-width="1.5"/>
+          <line x1="28.8" y1="24" x2="31.7" y2="26.4" stroke="var(--accent)" stroke-width="1.5"/>
+        </svg>
+        <span>Retain<strong>AI</strong></span>
+      </div>
+      <h2>¿Listo para reducir la deserción en el SENA?</h2>
+      <p>Este proyecto de grado está diseñado para implementarse directamente en los centros de formación del SENA a nivel nacional.</p>
+      <div class="cta-actions">
+        <a href="#solucion" class="btn-primary">Ver la Solución</a>
+        <a href="#equipo" class="btn-ghost">Conocer el Equipo</a>
+      </div>
+      <div class="cta-footer">
+        <span>Proyecto de Grado · SENA · 2024–2025</span>
+        <span>·</span>
+        <span>ADSO 3139687</span>
+        <span>·</span>
+        <span>Colombia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:14px">
+          <div class="logo-mark small">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+              <path d="M24 4 L40 11 L40 27 C40 36 32 43 24 46 C16 43 8 36 8 27 L8 11 Z"
+                    fill="rgba(56,189,248,0.12)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="24" cy="22" r="5" fill="var(--accent)"/>
+              <circle cx="14" cy="16" r="2.5" fill="var(--accent)" opacity="0.65"/>
+              <circle cx="34" cy="16" r="2.5" fill="var(--accent)" opacity="0.65"/>
+              <circle cx="14" cy="28" r="2.5" fill="var(--accent)" opacity="0.65"/>
+              <circle cx="34" cy="28" r="2.5" fill="var(--accent)" opacity="0.65"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Retain<span class="logo-accent">AI</span></span>
+            <span class="logo-tag">SENA · ADSO 3139687</span>
+          </div>
+        </div>
+        <p>Plataforma de análisis predictivo de deserción estudiantil para el SENA. Desarrollada como proyecto de grado ADSO 3139687.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#problema">El Problema</a></li>
+          <li><a href="#solucion">Solución IA</a></li>
+          <li><a href="#metodologia">Metodología</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Proyecto</h5>
+        <ul>
+          <li><a href="#">Informe Final</a></li>
+          <li><a href="#">Código Fuente</a></li>
+          <li><a href="#">Documentación</a></li>
+          <li><a href="#sena">Sobre el SENA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 RetainAI · Proyecto de Grado SENA · ADSO 3139687 · Todos los derechos reservados</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
